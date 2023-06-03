@@ -1,0 +1,25 @@
+{
+  "name": "test-node",
+  "version": "1.0.0",
+  "description": "- ### Khởi tạo node project:",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thangpqtechlead/test-node-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thangpqtechlead/test-node-example/issues"
+  },
+  "homepage": "https://github.com/thangpqtechlead/test-node-example#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
