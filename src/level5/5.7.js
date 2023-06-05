@@ -5,7 +5,7 @@ MapKey: Cho 1 mảng các key, vào 1 mảng các object , Viết một function
  * @param {array} key
  * @returns MapKey
  */
-function MapKey(arr, key) {
+function mapKey(arr, key) {
   let result = [];
   arr.map((x) => {
     let cur = {};
@@ -17,4 +17,4 @@ function MapKey(arr, key) {
   return result;
 }
 
-module.exports = MapKey;
+module.exports = mapKey;
