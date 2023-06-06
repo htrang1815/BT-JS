@@ -1,11 +1,11 @@
-function readFile(file, params) {
+function templateString(file, params) {
   const fs = require("fs");
   const path = require("path");
 
-  const filePath = path.join(__dirname, "input.txt");
-  const fileOutput = path.join(__dirname, "output.txt");
+  const filePath = path.join(__dirname, file);
 
   const printFile = (html, paramHtml) => {
+    const fileOutput = path.join(__dirname, `template${file}`);
     let htmlReplaceStr = html;
     const keys = Object.keys(paramHtml);
     for (const key of keys) {
@@ -13,7 +13,6 @@ function readFile(file, params) {
       const regex = new RegExp(placeholder, "g");
       htmlReplaceStr = htmlReplaceStr.replace(regex, paramHtml[key]);
     }
-
     fs.writeFile(fileOutput, htmlReplaceStr, (err) => {
       if (err) {
         console.error("Lỗi khi ghi tệp tin:", err);
@@ -35,4 +34,6 @@ function readFile(file, params) {
   });
 }
 
-readFile("input.txt", {name: 'Trang'});
+// module.exports = templateString;
+
+templateString("input.txt", { name: "Trang" });
