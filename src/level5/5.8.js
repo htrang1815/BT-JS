@@ -29,6 +29,10 @@ function switchOrder(a, b) {
   arr[i] = arr[j];
   arr[j] = temp;
 
+  arr.map((x, index) => {
+    x["order"] = index;
+  });
+
   return arr;
 }
 
