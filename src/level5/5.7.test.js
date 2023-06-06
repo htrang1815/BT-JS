@@ -17,22 +17,6 @@ test("The trim all array", () => {
   ]);
 });
 
-test("The trim all array", () => {
-  expect(
-    mapKey(
-      [
-        { a: 1, b: 1, c: 2, d: 4, e: 5 },
-        { a: 2, b: 1, c: 5, d: 4, e: 5 },
-        { d: 4, e: 5, a: 22, b: 11, c: 51 },
-      ],
-      ["b", "a", "d"]
-    )
-  ).toEqual([
-    { b: 1, a: 1, d: 4 },
-    { b: 1, a: 2, d: 4 },
-    { b: 11, a: 22, d: 4 },
-  ]);
-});
 
 test("The trim all array", () => {
   expect(
