@@ -10,7 +10,7 @@ function sumAll(arr) {
       if (!newarr[key]) {
         newarr[key] = 0;
       }
-      newarr[key] += cur[key];
+      newarr[key] += parseInt(cur[key], 0);
     }
     return newarr;
   }, {});
