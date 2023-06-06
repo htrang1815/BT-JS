@@ -6,20 +6,39 @@ uniq ArrayObject: Giống Uniq nhưng mở rộng cho 1 collection
  */
 
 function uniqArrayObject(arr) {
+  let arrKey = arr.reduce((key, cur) => {
+    for (const property in cur) {
+      if (!key.includes(property)) {
+        key.push(property);
+      }
+    }
+    return key;
+  }, []);
+  console.log(arrKey);
   let uniObject = [arr[0]];
   for (let i = 1; i < arr.length; i++) {
     let count = 0;
-    for (let x = 0; x < uniObject.length; x++) {
-      if (JSON.stringify(arr[i]) == JSON.stringify(uniObject[x])) {
-        count++;
+    let a = arr[i];
+    for (let j = 0; j < uniObject.length; j++) {
+      let b = uniObject[j]
+      const check = arrKey.every((x) => {
+        return a[x] === b[x]
+      })
+      if (check) {
+        count ++
       }
     }
     if (count == 0) {
       uniObject = [...uniObject, arr[i]];
     }
   }
-
+console.log(uniObject);
   return uniObject;
 }
+uniqArrayObject([
+  { x: 1, y: 2 },
+  { y: 2, x: 1 },
+  { x: 1, y: 2 , z : 3},
+]);
 
 module.exports = uniqArrayObject;

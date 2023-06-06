@@ -4,6 +4,18 @@ test("The uniq array object", () => {
   expect(
     uniqArrayObject([
       { x: 1, y: 2 },
+      { y: 2, x: 1 },
+      { x: 1, y: 2, z: 3 },
+    ])
+  ).toEqual([
+    { x: 1, y: 2 },
+    { x: 1, y: 2, z: 3 },
+  ]);
+});
+test("The uniq array object", () => {
+  expect(
+    uniqArrayObject([
+      { x: 1, y: 2 },
       { x: 2, y: 1 },
       { x: 1, y: 2 },
     ])
