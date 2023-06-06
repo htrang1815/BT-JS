@@ -4,7 +4,7 @@
   "description": "- ### Khởi tạo node project:",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
