@@ -33,3 +33,19 @@ test("The trim all array", () => {
     { b: 11, a: 22, d: 4 },
   ]);
 });
+
+test("The trim all array", () => {
+  expect(
+      mapKey(
+          [
+              { name: "John", age: 30, gender: "male" },
+              { name: "Marry", age: 25, gender: "female" },
+              { name: "Tom", age: 35, address: "123 Main St" },
+          ],
+          ["name", "age", "gender"]
+      )
+  ).toEqual([
+      { name: "John", age: 30, gender: "male" },
+      { name: "Marry", age: 25, gender: "female" },
+  ]);
+});

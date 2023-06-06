@@ -14,7 +14,10 @@ function mapKey(arr, key) {
     }
     result.push(cur);
   });
-  return result;
+  const re = result.filter((obj) =>
+    Object.values(obj).every((val) => val !== undefined)
+  );
+  return re;
 }
 
 module.exports = mapKey;
